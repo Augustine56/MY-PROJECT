@@ -1,0 +1,2 @@
+This is Country rest api project and is built with both javascript library,(React) CSS framework(tailwindcss), the api datas was fetched from the country api which is https://restcountries.com, this project is using react v18.1 and tailwind v3.1.
+this project consist of two major folders which are the public and src folder, then the src folder consist of two folders and few files, the folders are both pages and component folders, both has the children component of this project.
