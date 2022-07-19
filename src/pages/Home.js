@@ -77,7 +77,7 @@ useEffect(() => {
                 </select>
                 </div>
             
-            <div className="container grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto ml-2 lg:gap-13 lg:mx-2 md:gap-14 md:mx-auto">
+            <div className="container grid grid-cols-1  lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto ml-2 lg:gap-13 lg:mx-2 md:gap-14 md:mx-auto">
                 {countries.map( (country, index ) => <Link to={{ pathname : "details", state: country }}  key={index}><ThumbDetail 
                                                 title={country.name} 
                                                 image_url={country.flag} 
