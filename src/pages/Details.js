@@ -18,7 +18,7 @@ function Details() {
     const [mode, setMode] = useState(true)
     const [toggleBtn, setToggleBtn] = useState('<i class="far fa-sun"></i> Light Mode')
 
-    let {country} = useLocation()
+    let {state} = useLocation()
     
 
     const toggleDarkMode = () => {
@@ -52,26 +52,27 @@ function Details() {
                 </button>
                 </Link>
             </div>
-            {/* <div className="container flex mx-auto p-8 pl-0 pr-0">
-                <img src={country.flag} className="w-1/2 pr-8" alt={country.name} />
+            <div className="container lg:flex md:flex-none mx-auto p-8 pl-0 pr-0">
+                <img src={state.flag} className="w-2/2 lg:w-1/2 md:w-2/2 px-auto shadow-md dark:shadow-none mx-2 rounded-md mr-2 lg:mr-none md:mr-2 lg:mx-none md:mx-2 lg:pr-8" alt={state.name} />
                 <div className="p-8 pl-8">
-                    <h2 className="font-bold text-2xl mb-8">{country.name}</h2>
+                    <h2 className="font-bold text-2xl mb-8">{state.name}</h2>
                     <div className="grid grid-cols-2 gap-x-20 gap-y-4">
-                        <p>Native Name: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.nativeName}</span></p>
-                        <p>Population: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.population}</span></p>
-                        <p>Region: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.region}</span></p>
-                    <p>Sub Region: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.subregion}</span></p>
-                    <p>Capital: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.capital}</span></p>
-                    <p>Top Level Domain: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.topLevelDomain[0]}</span></p>
-                    <p>Currencies: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.currencies.map(cur => cur.name)}</span></p>
-                   <p>Languages: <span className="dark:text-gray-400 text-gray-700 text-sm">{country.languages.map(lang => lang.name+', ')}</span></p>
+                        <p>Native Name: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.nativeName}</span></p>
+                        <p>Population: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.population}</span></p>
+                        <p>Region: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.region}</span></p>
+                        <p>Sub Region: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.subregion}</span></p>
+                        <p>Capital: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.capital}</span></p>
+                        <p>Top Level Domain: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.topLevelDomain[0]}</span></p>
+                        <p>Currencies: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.currencies.map(cur => cur.name)}</span></p>
+                        <p>Languages: <span className="dark:text-gray-400 text-gray-700 text-sm">{state.languages.map(lang => lang.name+', ')}</span></p>
                     </div>
                     <div className="flex mt-16">
                         <p className="font-bold">Border Countries: </p>
+                        <p><span className='rounded-lg gap-3 py-auto cursor-pointer ml-2'>{state.borders.map(borders => borders+', ')}</span></p>
                     </div>
                 </div>
-            </div>*/}
-        </div> 
+            </div>
+        </div>
     )
 }
 

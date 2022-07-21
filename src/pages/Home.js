@@ -19,7 +19,6 @@ useEffect(() => {
       const res =  await fetch('https://restcountries.com/v2/all')
       const data = await res.json()
       await setCountries(data)
-      return res;
       // ...
     }
     fetchData();
@@ -41,17 +40,18 @@ useEffect(() => {
 
     const filterByRegion = async region => {
         if(region === '') return
-        const res = await fetch(`https://restcountries.com/v2/region/${region}`)
-        const data = await res.json()
-        await setCountries(data)
+         const res = await fetch(`https://restcountries.com/v2/region/${region}`)
+         const data = await res.json()
+         await setCountries(data)
     }
 
-    const searchCountry = async term => {
-        if(term.length < 3 || term === '') return 
-        const res = await fetch(`https://restcountries.com/v2/name/${term}`)
+
+    const searchCountry = async name => {
+        if(name.length < 3 || name === '') return
+        const res = await fetch(`https://restcountries.com/v2/name/${name}`)
         const data = await res.json()
         await console.log(data)
-        await setCountries(data) 
+        await setCountries(data)
     }
     return (    
         <div className="bg-gray-100 dark:bg-gray-800 pr-3 dark:text-white">
@@ -67,7 +67,7 @@ useEffect(() => {
             <div className="lg:flex md:flex container mx-auto mt-0 lg:mb-16 md:mb-16">
                 <i className="fa fa-search my-auto -mr-10 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"></i>
                 <input type="text" placeholder="Search for a country..." className="pl-10   pr-20 lg:pr-none md:pr-none p-2 shadow-md rounded-md ml-3 lg:ml-1 w-2/2 lg:w-1/3 md:w-1/3  dark:bg-gray-700" onChange={ term => searchCountry(term.target.value)} />
-                <select className="lg:ml-auto ml-2 lg:mr-2 md:mr- md:ml- mb-10 lg:mt-2 md:mt-2 lg:mb-0 md:mb-0 mt-1 p-2 shadow-md rounded-md font-medium dark:bg-gray-700" onChange={ val => filterByRegion(val.target.value)}>
+                <select className="lg:ml-auto ml-2 lg:mr-2 md:mr-auto  mb-10 lg:mt-2 md:mt-2 lg:mb-0 md:mb-0 mt-1 p-2 shadow-md rounded-md font-medium dark:bg-gray-700" onChange={ val => filterByRegion(val.target.value)}>
                     <option value="">Filter by Region</option>
                     <option value="africa">Africa</option>
                     <option value="americas">America</option>
