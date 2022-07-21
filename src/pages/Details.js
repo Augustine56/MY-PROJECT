@@ -53,7 +53,7 @@ function Details() {
                 </Link>
             </div>
             <div className="container lg:flex md:flex-none mx-auto p-8 pl-0 pr-0">
-                <img src={state.flag} className="w-2/2 lg:w-1/2 md:w-2/2 px-auto shadow-md dark:shadow-none mx-2 rounded-md mr-2 lg:mr-none md:mr-2 lg:mx-none md:mx-2 lg:pr-8" alt={state.name} />
+                <img src={state.flag} className="w-2/2 lg:w-1/2 md:w-2/2 px-auto shadow-md dark:shadow-none mx-2 rounded-md rounded-b-md rounded-r-md mr-2 lg:mr-none md:mr-2 lg:mx-none md:mx-2 lg:pr-8" alt={state.name} />
                 <div className="p-8 pl-8">
                     <h2 className="font-bold text-2xl mb-8">{state.name}</h2>
                     <div className="grid grid-cols-2 gap-x-20 gap-y-4">
