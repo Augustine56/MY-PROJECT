@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container1{
+width:300px;
+margin-bottom:3%;
+height:300px;
+}
+
+img{
+width:100%;
+}
+
+@media only screen and (max-width: 730px){
+ .container1{
+ margin-bottom:6%;
+ }
+ }

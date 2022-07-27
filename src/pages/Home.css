@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav{
+width:100vw;
+padding-right:4%;
+padding-left:3%;
+}
+
+.input{
+margin-left:3%
+}
+
+.sec{
+}
+
+ @media only screen and (max-width: 730px){
+ .input{
+ margin-left:2px;
+ 
+ }
+ .nav{
+ width:100vw;
+ padding-left:7%;
+ }
+ .sec{
+ margin-left:2px;
+ }
+ }

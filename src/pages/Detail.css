@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.state-prop{
+margin-bottom:-9px;
+}
