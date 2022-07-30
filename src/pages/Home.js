@@ -40,6 +40,8 @@ useEffect(() => {
 
     const toggleDarkMode = () => {
         if(mode){
+
+
             document.documentElement.classList.add('dark')
             setToggleBtn('<i class="far fa-sun"></i> Light Mode')
             setMode(current => current = !current)
@@ -67,20 +69,20 @@ useEffect(() => {
         await setCountries(data)
     }
     return (    
-        <div className="bg-gray-100  dark:bg-gray-800 pr-3 dark:text-white">
+        <div className="bg-gray-100  dark:bg-gray-800  dark:text-white">
             <div className="nav w-screen shadow-md py-6 px-3  bg-white dark:bg-gray-700 dark:text-white mb-4 lg:mb-16 md:mb-16">
                 <div className="flex container md:pl-8 md:pr-11 mx-auto">
-                    <h1 className="font-bold lg:font-bold md:font-bold lg:text-xl md:text-xl text-l -ml-4">Where in the world?</h1>
+                    <h1 className="txt font-bold lg:font-bold md:font-bold lg:text-xl md:text-xl text-l ">Where in the world?</h1>
                     <div className="ml-auto font-medium">
                         <button onClick={() => toggleDarkMode()} dangerouslySetInnerHTML={{__html: toggleBtn}} clasName="mr-6 ">
                         </button>
                     </div>
                 </div>
             </div>
-            <div className="container lg:flex  md:flex  ml-3   mt-0 lg:mb-16 md:mb-16">
-                <i className="fa fa-search my-auto -mr-10 lg:-mr-20 lg:ml-14 md:-mr-17 md:ml-12 md:-mr-16 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"></i>
+            <div className="container lg:flex  md:flex  ml-3     mt-0 lg:mb-16 md:mb-16">
+                <i className="fa fa-search my-auto -mr-10 lg:-mr-20 lg:ml-14  md:ml-12 md:-mr-8 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"></i>
                 <input type="text" placeholder="Search for a country..." className="input pl-10 md:pl-10  pr-20 lg:pr-none  p-2 shadow-md rounded-md  lg:ml-9 w-2/2 lg:w-1/3 md:w-2/2  dark:bg-gray-700" onChange={ term => searchCountry(term.target.value)} />
-                <select className="sec  md:h-11 h-10  lg:ml-auto lg:mr-10 md:ml-auto md:mr-14  mb-10 lg:mt-2 md:mt-2 lg:mb-0 md:mb-0 mt-1 pl-3  pr-7 shadow-md rounded-md font-medium dark:bg-gray-700" onChange={ val => filterByRegion(val.target.value)}>
+                <select className="sec  md:h-11 h-10  lg:ml-auto lg:mr-12  md:ml-auto md:mr-14  mb-10 lg:mt-2 md:mt-2 lg:mb-0 md:mb-0 mt-1 pl-3  pr-7 shadow-md rounded-md font-medium dark:bg-gray-700" onChange={ val => filterByRegion(val.target.value)}>
                     <option value="">Filter by Region</option>
                     <option value="africa">Africa</option>
                     <option value="americas">America</option>
@@ -90,7 +92,7 @@ useEffect(() => {
                 </select>
                 </div>
             
-            <div className="container grid grid-cols-1   lg:grid-cols-4 md:grid-cols-2  lg:ml-15 mb-4  ml-11  md:ml-14 md:mx-auto">
+            <div className="container3 grid grid-cols-1    lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2   lg:ml-15 mb-4  ml-11  md:ml-14 md:mx-auto">
                 {countries.map( (country, index ) => <Link to={{ pathname : "details", state: country }}  key={index}><ThumbDetail 
                                                 title={country.name} 
                                                 image_url={country.flag} 

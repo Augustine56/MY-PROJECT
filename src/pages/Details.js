@@ -37,9 +37,9 @@ function Details() {
 
     return (
         <div className="bg-white dark:bg-gray-800 dark:text-white">
-            <div className="w-screen shadow-md  py-6 px-3 bg-white dark:bg-gray-700 dark:text-white mb-10 lg:mb-16 md:mb-16">
+            <div className="nav w-screen shadow-md  py-6 px-1 bg-white dark:bg-gray-700 dark:text-white mb-10 lg:mb-16 md:mb-16">
                 <div className="flex container mx-auto">
-                    <h1 className="font-bold lg:font-bold md:font-bold lg:text-xl md:text-xl text-l lg:pl-8">Where in the world?</h1>
+                    <h1 className="txt font-bold lg:font-bold md:font-bold lg:text-xl md:text-xl text-l lg:pl-8">Where in the world?</h1>
                     <div className="ml-auto font-medium mr-4 lg:mr-9">
                         <button onClick={() => toggleDarkMode()} dangerouslySetInnerHTML={{__html: toggleBtn}}>
                         </button>
@@ -48,13 +48,13 @@ function Details() {
             </div>
             <div className="container mx-auto mb-16">
             <Link to = "/">
-                <button className="px-8 py-2 ml-8 lg:ml-9  bg-white text-gray-600 shadow-lg dark:bg-gray-700 dark:text-white rounded-md">
+                <button className="px-8 py-2 ml-8 lg:ml-10  bg-white text-gray-600 shadow-lg dark:bg-gray-700 dark:text-white rounded-md">
                     <i className="fa fa-arrow-left"></i> Back
                 </button>
                 </Link>
             </div>
             <div className="container lg:flex md:flex-none -mt-7  mx-auto p-8 pl-0 pr-0">
-                <img src={state.flag} className="w-80  lg:w-1/2 md:w2/2 md:ml-10 md:h-80 px-auto shadow-md dark:shadow-none ml-8 h-60 lg:h-80 rounded-md rounded-br-md rounded-tr-md mr-1 lg:mr-none md:mr-2 lg:mx-none md:mx-2 lg:pr-8" alt={state.name} />
+                <img src={state.flag} className="w-2/3  lg:w-1/2 xl:ml-10 xl:w-2/5 md:w1/2 md:ml-5 md:h-80 px-auto shadow-md dark:shadow-none ml-7 h-60 lg:h-80 rounded-md rounded-br-md rounded-tr-md mr-1 lg:mr-none md:mr-2 lg:mx-none md:mx-2 lg:pr-8" alt={state.name} />
                 <div className="p-8 pl-8">
                     <h2 className="font-bold text-2xl mb-6">{state.name}</h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mb-0 gap-x-20 gap-y-4">

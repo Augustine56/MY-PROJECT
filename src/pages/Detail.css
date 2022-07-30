@@ -5,3 +5,14 @@
 .state-prop{
 margin-bottom:-9px;
 }
+
+
+    @media only screen and (max-width: 320px){
+        .txt{
+ font-weight:bold;
+ font-size:12px;
+ }
+ 
+    }
+
+    

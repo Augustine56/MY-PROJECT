@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 .container1{
-width:300px;
+width:270px;
 margin-bottom:3%;
-height:300px;
+height:270px;
+margin-right:-3%;
 }
 
 img{
@@ -15,5 +16,39 @@ width:100%;
 @media only screen and (max-width: 730px){
  .container1{
  margin-bottom:6%;
+ width:300px;
+ height:300px;
+ }
+
+ img{
+ width:100%;
+ }
+ }
+ @media only screen and (max-width: 375px){
+    .container1{
+ margin-bottom:6%;
+ width:270px;
+ height:270px;
+ margin-left:23px;
+ }
+ img{
+ width:100%;
+ }
+
+ }
+ @media only screen and (min-width: 375px){
+   .container1{
+      margin-right:7px;
+   }
+ }
+ @media only screen and (max-width: 299px){
+   .container1{
+ margin-bottom:6%;
+ width:230px;
+ height:230px;
+ margin-left:23px;
+ }
+ img{
+ width:100%;
  }
  }
